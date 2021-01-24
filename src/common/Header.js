@@ -8,6 +8,10 @@ import SearchIcon from '@material-ui/icons/Search';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
+import {
+  Link as RouterLink,
+} from "react-router-dom";
+
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
@@ -57,7 +61,8 @@ function Header(props) {
             noWrap
             key={section.title}
             variant="body2"
-            href={section.url}
+            to={section.path}
+            component={RouterLink}
             className={classes.toolbarLink}
           >
             {section.title}

@@ -4,6 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import { Divider } from '@material-ui/core';
+
+const title = "";
+const description="“We May Encounter Many Defeats But We Must Not Be Defeated.” – Maya Angelou";
 
 function Copyright() {
   return (
@@ -28,16 +32,16 @@ const useStyles = makeStyles((theme) => ({
 
 function Footer(props) {
   const classes = useStyles();
-  const { description, title } = props;
 
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
+        <Divider/>
         <Typography variant="h6" align="center" gutterBottom>
           {title}
         </Typography>
         <Typography
-          variant="subtitle1"
+          variant="subtitle"
           align="center"
           color="textSecondary"
           component="p"

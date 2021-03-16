@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -22,13 +23,24 @@ const useStyles = makeStyles({
   },
   cardContentDescription: {
     marginTop: 20,
-    minHeight: 150
+    minHeight: 200
   }
 });
 
 function FeaturedPost(props) {
   const classes = useStyles();
   const { post } = props;
+
+  let postDescriptionMultiLine = post.descriptionMultiLine == null? []: post.descriptionMultiLine;
+
+  // if(String(post.description).length > 0){
+  //   postDescription = post.description;
+  // }
+  // else{
+  //   post.descriptionMultiLine.forEach(x => {
+  //     postDescription 
+  //   });
+  // }
 
   return (
     <Grid item xs={12} md={6}>
@@ -45,10 +57,18 @@ function FeaturedPost(props) {
               <Divider/>
               <Typography className={classes.cardContentDescription} variant="subtitle1" paragraph>
                 {post.description}
+                {postDescriptionMultiLine.map((d) => {
+                  return (
+                    <Box component="span">
+                      <Box component="span" fontWeight="fontWeightBold">{"" + d.subtitle + ": "}</Box>
+                      <Box component="span">{"" + d.text}</Box><br/>
+                    </Box>
+                  )
+                })}
               </Typography>
-              <Typography variant="subtitle1" color="primary">
+              {/* <Typography variant="subtitle1" color="primary">
                 Continue reading...
-              </Typography>
+              </Typography> */}
             </CardContent>
           </div>
           <Hidden smDown>

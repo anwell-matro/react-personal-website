@@ -23,18 +23,52 @@ const useStyles = makeStyles((theme) => ({
 
 const featuredPosts = [
   {
-    title: 'Short Tearm Goals',
-    date: 'Jan 24, 2021',
-    description:
-      'I am currently looking to get some exposure to Spring Boot (Java Framework), Docker/Kubernetes and Google Cloud Services. I am hoping integrate these here so if you have any tips or ideas, please let me know!',
+    title: 'Technical Background',
+    date: 'March 15, 2021',
+    description:'',
+    descriptionMultiLine: [
+      {
+        subtitle: 'AWS',
+        text: 'Lambda, DynamoDB, KMS, Secret Manager, IAM Roles and Policies'
+      },
+      {
+        subtitle: 'Languages',
+        text: 'Java, JavaScript (NodeJS), C#'
+      },
+      {
+        subtitle: 'Databases',
+        text: 'SQL Server, Oracle DB, PostgreSQL'
+      },
+      {
+        subtitle: 'CI/CD',
+        text: 'Git, Bamboo, Artifactory, Terraform:AWS'
+      },
+      {
+        subtitle: 'Technologies',
+        text: 'TIBCO BusinessWorks, JMS (IBM MQ and Tibco EMS), Kafka, Terraform:AWS'
+      }
+    ],
     image: 'https://source.unsplash.com/4hbJ-eymZ1o',
     imageText: 'Image Text',
   },
   {
     title: 'Travel Destinations',
     date: 'Jan 01, 2021',
-    description:
-      'Seongsan Ilchulbong (Jeju-do, South Korea), Fushimi Inari Taisha (Kyoto, Japan), Ruifeng Night Market (Kaohsiung City, Taiwan)',
+    description: '',
+    descriptionMultiLine: [
+      {
+        subtitle: 'Japan',
+        text: 'Kyoto (Fushimi Inari Taisha, Nara Park), Tokyo (Ginza, Akihabara, Omotesando)'
+      },
+      {
+        subtitle: 'South Korea',
+        text: 'Jeju-do (Seongsan Ilchulbong), Seoul (Myeongdong, Hongdae)'
+      },
+      {
+        subtitle: 'Taiwan',
+        text: 'Ruifeng Night Market'
+      }
+    ],
     image: 'https://source.unsplash.com/rf6ywHVkrlY',
     imageText: 'Image Text',
   },

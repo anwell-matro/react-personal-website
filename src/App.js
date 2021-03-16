@@ -29,9 +29,9 @@ const headerTitle = 'Anwell M';
 
 const sections = [
   { title: 'Home', path: '/home', url: '#' },
-  { title: 'Projects', path: '/projects', url: '#' },
-  { title: 'Technical Skills', path: '/technical', url: '#' },
-  { title: 'About Me', path: '/about', url: '#' }
+  // { title: 'Projects', path: '/projects', url: '#' },
+  // { title: 'Technical Skills', path: '/technical', url: '#' },
+  // { title: 'About Me', path: '/about', url: '#' }
 ];
 
 function App() {
